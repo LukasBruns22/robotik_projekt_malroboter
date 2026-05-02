@@ -38,3 +38,31 @@ colcon build
 
 # Source the workspace
 source install/setup.bash
+
+### Build & Setup
+Running the Pipeline
+Follow these steps in order to execute the drawing process:
+
+1. Establish Connection
+
+Establish the communication between the UR5e and the remote controller:
+
+Bash
+ros2 launch launch/setupRobotTrackingConnection.py
+2. Calibration
+
+Run the calibration routine to calculate the required transformation matrices:
+
+Bash
+ros2 launch launch/calibrate_robot.py
+3. Execution
+
+Start the drawing pipeline by specifying the target image path:
+
+Bash
+ros2 launch launch/draw_picture.py picture_path:="/home/prakt3/Pictures/chopper.jpg"
+📈 Results
+Watch the full system in action, including the tool-switching and drawing process, on YouTube:
+
+
+(Note: Paste your actual YouTube link above)
