@@ -11,7 +11,7 @@
 
 ## Demo
 
-> 📺 **[Watch the full drawing pipeline on YouTube](https://your-youtube-link-here)**
+> 📺 **[Watch the full drawing pipeline on YouTube](https://www.youtube.com/watch?v=YwW8a0XS5Mk&t=311s)**
 
 ![UR5e Drawing Process](path/to/your/drawing.gif)
 *The UR5e executing a multi-color drawing — including automated tool-switching between pens.*
