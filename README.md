@@ -46,6 +46,6 @@ This command is used to draw the picture. What kind of picture you want to draw 
 ros2 launch launch/draw_picture.py picture_path:="/home/prakt3/Pictures/chopper.jpg"
 ```
 ## Results
-Here is a link to our Youtube Video highlighting our project and showing our results. [YouTube](https://www.youtube.com/watch?v=mzB1VGEGcSU&list=RDmzB1VGEGcSU&start_radio=1)
+Here is a link to our Youtube Video highlighting our project and showing our results. [YouTube](https://www.youtube.com/watch?v=YwW8a0XS5Mk&t=311s)
 
 
