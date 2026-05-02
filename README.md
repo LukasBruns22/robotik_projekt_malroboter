@@ -28,7 +28,7 @@ Developed at the **Institute of Robotics and Autonomous Systems, University of L
 
 ## Key Features
 
-- **Motion Planning** — Integrated [MoveIt2](https://moveit.ros.org/) for collision-aware trajectory planning and smooth execution on the UR5e.
+- **Motion Planning** — Integrated [MoveIt2](https://moveit.ros.org/) for trajectory planning and smooth execution on the UR5e.
 - **Real-Time Pose Tracking** — [OptiTrack](https://optitrack.com/) motion capture tracks the end-effector, whiteboard, and pen holder at runtime.
 - **Computer Vision Pipeline** — OpenCV edge detection converts `.jpg` images into ordered waypoints, then smoothed into **Bézier curves** for fluid strokes.
 - **Hand-Eye Calibration** — Custom least-squares solver aligns the OptiTrack world frame with the robot base frame for sub-millimeter accuracy.
