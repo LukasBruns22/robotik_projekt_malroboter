@@ -1,42 +1,40 @@
-Autonomous Drawing Robot with UR5e
-Institute of Robotics and Autonomous Systems, University of Lübeck
+# Autonomous Drawing Robot with UR5e
+**Institute of Robotics and Autonomous Systems, University of Lübeck**
 
-Overview
-This project implements an autonomous multi-color drawing pipeline using a UR5e 6-axis industrial robot. The system transforms standard images into robotic trajectories using edge detection and Bezier curve interpolation, managed via ROS2 and MoveIt2.
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![ROS2](https://img.shields.io/badge/ROS2-Humble-22314E?style=for-the-badge&logo=ros&logoColor=white)
+![MoveIt2](https://img.shields.io/badge/MoveIt2-Planning-orange?style=for-the-badge)
 
-Key Features & Tech Stack
-Motion Planning: Integrated MoveIt2 for collision-aware trajectory planning and execution.
+---
 
-Perception & Tracking: Utilized Optitrack Motion Capture for real-time tracking of the end-effector, whiteboard, and penholder.
+## 📺 Project Highlight
+![UR5e Drawing Process](path/to/your/drawing.gif)
+*Note: Replace this with a link to your GIF or a high-res screenshot of the robot in action.*
 
-Computer Vision: Developed an edge-detection pipeline to convert .jpg images into waypoints and smooth Bezier curves.
+---
 
-Calibration: Implemented a Hand-Eye Calibration routine using 10 linearly independent poses and a Least-Squares solver for high-precision coordinate transformation.
+## 📝 Overview
+This project implements an autonomous multi-color drawing pipeline using a **UR5e 6-axis industrial robot**. The system transforms standard images into robotic trajectories using edge detection and Bezier curve interpolation, managed via **ROS2** and **MoveIt2**.
 
-Software: ROS2 (Humble/Foxy), C++, Python, OpenCV.
+## 🚀 Key Features
+*   **Motion Planning:** Integrated **MoveIt2** for collision-aware trajectory planning and execution.
+*   **Perception & Tracking:** Utilized **Optitrack Motion Capture** to track the end-effector, whiteboard, and penholder in real-time.
+*   **Computer Vision:** OpenCV-based edge detection pipeline to convert `.jpg` images into waypoints and smooth **Bezier curves**.
+*   **Precision Calibration:** Hand-Eye Calibration routine using a **Least-Squares solver** to align robot and motion-capture coordinate frames.
 
-System Architecture
-Calibration: Aligning the Optitrack world frame with the Robot base frame.
+## 🛠 System Architecture
+1.  **Calibration:** Aligning the Optitrack world frame with the Robot base frame.
+2.  **Image Processing:** Waypoint extraction and Bezier curve generation.
+3.  **Path Generation:** Trajectory calculation for smooth robotic motion.
+4.  **Execution:** Automated multi-color drawing and tool-switching logic.
 
-Image Processing: Extracting waypoints from user-provided images.
+## 💻 Getting Started
 
-Path Generation: Calculating Bezier curves for smooth robot motion.
-
-Execution: Automated tool switching for multi-color drawings.
-
-Getting Started
-Bash
+### Build & Setup
+```bash
 # Build the workspace
 colcon build
+
+# Source the workspace
 source install/setup.bash
-
-# 1. Establish UR5e & Tracking Connection
-ros2 launch launch/setupRobotTrackingConnection.py
-
-# 2. Run Hand-Eye Calibration
-ros2 launch launch/calibrate_robot.py
-
-# 3. Start Drawing Pipeline
-ros2 launch launch/draw_picture.py picture_path:="path/to/image.jpg"
-Results
-Full Project Demonstration on YouTube
